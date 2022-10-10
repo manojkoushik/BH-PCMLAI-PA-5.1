@@ -1,6 +1,6 @@
 # Drive-By Coupon EDA
 
-_This is a Solution Practical Application 5.1 exercise of Module 5, in the Berkeley Haas, Professional Certificate in Machine Learning and AI course_
+_This is a Solution to the Practical Application 5.1 exercise of Module 5, in the Berkeley Haas, Professional Certificate in Machine Learning and AI course_
 
 ## Will a Customer Accept the Coupon?
 ### Context
