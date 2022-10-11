@@ -135,6 +135,9 @@ Accepted        7210
 Not Accepted    5474
 Name: Coupon Accepted, dtype: int64
 ```
+
+![image](images/newplot.png)
+
 __56.8% of those given coupons accepted them__
 
 And when looking at the various types of coupons offered:
@@ -152,6 +155,11 @@ Bar	Accepted	827	41.001487	6.520025
 Restaurant(<20)	Not Accepted	816	29.289304	6.433302
 Carry out & Take away	Not Accepted	633	26.452152	4.990539
 ```
+![image](images/newplot1.png)
+
+- Those visiting coffee shops got the most coupons, but had average acceptance rate
+- Those doing takeout have the highest coupon acceptance rate
+- Those visiting bars have the lowest acceptance rate
 
 ### EDA of Bar Coupons
 
@@ -162,6 +170,9 @@ Not Accepted    1190
 Accepted         827
 Name: Coupon Accepted, dtype: int64
 ```
+
+![image](images/newplot2.png)
+
 __59% of customers going to bars accepted coupons__
 
 #### Compare the acceptance rate between those who went to a bar 3 or fewer times a month to those who went more
@@ -173,6 +184,11 @@ __59% of customers going to bars accepted coupons__
 1	Bar Visits <= 3	Not Accepted	457	47.259566	39.193825
 3	Bar Visits > 3	Not Accepted	46	23.115578	3.945111
 ```
+
+![image](images/newplot3.png)
+
+![image](images/newplot4.png)
+
 - Vast majority of coupons went to those that visit bars 3 or less times a month
 - Acceptance rate for those going more than 3 times is significantly higher!
 
@@ -184,6 +200,11 @@ __59% of customers going to bars accepted coupons__
 3	Other	Accepted	742	39.363395	36.787308
 1	Bar Visits > 1 & Age <= 25	Not Accepted	47	35.606061	2.330193
 ```
+
+![image](images/newplot5.png)
+
+![image](images/newplot6.png)
+
 Those who go to a bar more than once a month and are 25 or less of age are more marginally more inclined to accept coupons
 
 #### Use the same process to compare the acceptance rate between drivers who go to bars more than once a month and had passengers that were not a kid and had occupations other than farming, fishing, or forestry.
@@ -195,6 +216,12 @@ Those who go to a bar more than once a month and are 25 or less of age are more 
 3	Other	Accepted	717	38.465665	35.547843
 1	Bar Visits >= 1, non-kid Passenger in car and ...	Not Accepted	43	28.104575	2.131879
 ```
+
+
+![image](images/newplot7.png)
+
+![image](images/newplot8.png)
+
 People going to bars more than once a month, not working in FFF and having a passenger in the car that is not a kid have a significantly higher acceptance rate than others.
 
 #### Compare the acceptance rates between those drivers who:
@@ -211,6 +238,12 @@ Group	Coupon Accepted	Count	Percentage	Overall Percentage
 3	Bars > 1, No kids, Not Widowed	Not Accepted	14	36.842105	0.694100
 1	Bars > 1, Age < 30	Not Accepted	104	31.419940	5.156173
 ```
+
+
+![image](images/newplot9.png)
+
+![image](images/newplot10.png)
+
 - Those who go to bars more than once a month and are aged below 30 have the highest acceptance rate
 - Those who visit cheap restaurants and have low income have the least acceptance rate
 
@@ -223,16 +256,36 @@ Group	Coupon Accepted	Count	Percentage	Overall Percentage
 - Those NOT working in Farming, Fishing or Forestry tend to have a slightly higher propensity to accept the coupons
 - If the customer tends to spend money on Restaurants, they are less likely to accept Bar coupons, possibly because they don't go to bars as much
 
+![image](images/newplot11.png)
+
+__The vast majority of coupons though are offered to customers who never go to bars are go very infrequently. This should change__
+
 ### EDA of CarryAway Coupons
 
 From an initial analysis of distribution of coupon acceptance based on number of times a customer does carry away, Acceptance rate is correlated with frequency.
 
+![image](images/newplot12.png)
+
+__Acceptance rate does tend to increase with customers who do Carryaway more frequently__
+
 #### What is the overall distribution of coupon acceptance for Carraway customers?
-- Those identified as 'female' tend to accept or reject coupons less frequently (indicating it's offered to them less) with a wider variance than those identified as 'male'. Male's tend to accept coupons at a far higher rate
-- Those with lower incomes (<62.5K) have a higher propensity to accept coupons with low variance (higher certainty)
-- Average acceptance rate of CarryaAway coupons is 73.5%, giving us the benchmark to test various customer attributes against
+
+![image](images/newplot13.png)
+
+Those identified as 'female' tend to accept or reject coupons less frequently (indicating it's offered to them less) with a wider variance than those identified as 'male'. Male's tend to accept coupons at a far higher rate
+
+![image](images/newplot14.png)
+
+Average acceptance rate of CarryaAway coupons is 73.5%, giving us the benchmark to test various customer attributes against
 
 #### Do kids and Income have any relevance to who gets coupons and accepts them?
+
+![image](images/newplot15.png)
+
+![image](images/newplot16.png)
+
+Lower incomes get higher coupon offers. Acceptance rate also tends to be marginally higher for lower income levels
+
 ```
 
 Coupon Accepted	Percentage
@@ -246,6 +299,13 @@ Partner	Accepted	71	2.966987
 Kid(s)	Not Accepted	45	1.880485
 Partner	Not Accepted	26	1.086502
 ```
+
+![image](images/newplot17.png)
+
+![image](images/newplot18.png)
+
+Acceptance rate is significantly boosted if NO passengers are present. If a passenger is present, coupon acceptance is more likely when passenger is not family member
+
 ```
 Group	Coupon Accepted	Count	Percentage	Overall Percentage
 0	Income < 62.5k, Kids in Car	Accepted	66	76.744186	2.758044
@@ -257,9 +317,12 @@ Group	Coupon Accepted	Count	Percentage	Overall Percentage
 3	Income < 62.5k, No Kids in Car	Not Accepted	369	24.815064	15.419975
 1	Income < 62.5k, Kids in Car	Not Accepted	20	23.255814	0.835771
 ```
-- Lower incomes get higher coupon offers. Acceptance rate also tends to be marginally higher for lower income levels
-- Acceptance rate is significantly boosted if NO passengers are present. If a passenger is present, coupon acceptance is more likely when passenger is not family member
-- Low income is a significant factor in determining if coupon is offered. But passengers and passengers being family members should also be considered and given higher weightage
+
+![image](images/newplot19.png)
+
+![image](images/newplot20.png)
+
+Low income is a significant factor in determining if coupon is offered. But passengers and passengers being family members should also be considered and given higher weightage
 
 #### How about Gender and Age and destination?
 ```
@@ -289,6 +352,9 @@ Group	Coupon Accepted	Count	Percentage	Overall Percentage
 13	Male, Home, Age < 36	Not Accepted	41	19.069767	1.713331
 15	Male, Home, Age >= 36	Not Accepted	9	9.473684	0.376097
 ```
+
+![image](images/newplot21.png)
+
 - Gender plays a huge role. Males tend to pick up food more often
 - Folks headed home are more likely to pick up food
 - Folks > 35 years of age are more likely to pick up food
